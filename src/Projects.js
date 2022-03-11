@@ -26,7 +26,7 @@ const featuredProjects = [
         date:"2022",
         description:"The page you are currently on is used to show my projects, github repository and CV. ",
         github:"https://github.com/mrehmm001/portfolio",
-        liveLink:"http://localhost:3000/",
+        liveLink:"https://muneeb-rehman.herokuapp.com/",
         techList:["React.js","JavaScript","Material-UI"],
         imageURL:"assets/portfolio.JPG",
         id:2
