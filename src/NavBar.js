@@ -6,15 +6,6 @@ import { useEffect, useState } from "react";
 import ClearIcon from '@mui/icons-material/Clear';
 
 const styles = {
-    navBar:{
-        position:"absolute",
-        zIndex:3,
-        width:"100%",
-        margin:"0px",
-        padding:"20px",
-        transition: "background-color 500ms linear"
-
-    },
     menuIcon:{
         fontSize:"2.5em"
     },
@@ -38,7 +29,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 function Navbar({width,handleNavClick}) {
 
-
     function NavButton({width,click,linkName}){
         return(
             <Grid item style={{width:width}}>
@@ -48,13 +38,13 @@ function Navbar({width,handleNavClick}) {
     }
 
     const [state,setState] = useState(false)
-    const [background,setBackground]=useState("transparent")
+    const [navState,setNavState]=useState({background:"transparent",padding:"15px"})
     const handleScroll = () => {
         const position = window.pageYOffset;
         if(position<10){
-            setBackground("transparent")
+            setNavState({background:"transparent",padding:"15px"})
         }else{
-            setBackground("primary")
+            setNavState({background:"",padding:"8px",top:navState.top})
         }
     };
 
@@ -71,10 +61,18 @@ function Navbar({width,handleNavClick}) {
         setState(open)
     }
 
-
     return (
 
-        <Box className="nav" color="red" style={styles.navBar}>
+        <Paper elevation={navState.background!="transparent"? 2 : 0} className="nav" sx={{
+            position:"fixed",
+            zIndex:3,
+            background:navState.background,
+            width:"100%",
+            margin:"0px",
+            padding:navState.padding,
+            transition: "all 200ms linear"
+    
+        }}>
             {/* For larger screens */}
             <Container sx={{ display: { xs: 'none', md: 'block' } }}>
                 <Grid container justifyContent="space-between" >
@@ -108,7 +106,7 @@ function Navbar({width,handleNavClick}) {
                 
             </Container>
 
-        </Box> 
+        </Paper> 
      );
 }
 

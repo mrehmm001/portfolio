@@ -157,7 +157,7 @@ const styles = {
     imageStyle:{
         objectFit:"cover",
         width:"100%",
-        height:"100%"
+        height:"100%",
     },
     cardContent:{flex:1.5,
         marginRight:"auto", 
@@ -272,7 +272,11 @@ function Projects() {
         
         gsap.fromTo(element.querySelector(".heading-4"),{x:-100},{x:0,
             stagger: animationSpeed,
-            scrollTrigger: element.querySelector(".heading-4")})          
+            scrollTrigger: element.querySelector(".heading-4")}) 
+            
+        return () => {
+            gsap.kill()
+            };     
      }, []);
     return ( 
         <Paper className="Projects" style={styles.container} ref={ref}>

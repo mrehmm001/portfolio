@@ -58,7 +58,12 @@ function AboutMe() {
             yoyo: true })
         gsap.fromTo(element.querySelectorAll(`.skill`),{opacity:0},{opacity:1,
                 stagger: animationSpeed,
-                scrollTrigger: element.querySelector(`.skill`)},`-=${animationSpeed}`)    
+                scrollTrigger: element.querySelector(`.skill`)},`-=${animationSpeed}`) 
+        
+        return () => {
+            gsap.kill()
+            };         
+                
      }, []);
     return ( 
         <Paper className={"About"} style={styles.container} ref={ref}>
@@ -110,7 +115,7 @@ function AboutMe() {
                         <Divider sx={{display:{xs:"none",md:"block"}}} orientation="vertical" flexItem></Divider>
                         <Grid className="picture" flex={1} item>
                             <Paper elevation={3} sx={{overflow:"hidden",position:"relative",marginTop:{xs:"2em",md:"0px"},marginLeft:{xs:"auto"},marginRight:{xs:"auto"},maxWidth:"300px",height:"350px"}}>
-                                <img style={{width:"100%",height:"110%",objectFit:"cover",position:"absolute",bottom:"1px"}} src={require("./assets/profile.jfif")} alt="" />
+                                <img style={{width:"100%",height:"110%",objectFit:"cover",position:"absolute",bottom:"0.2px"}} src={require("./assets/profile.jfif")} alt="" />
                             </Paper>
                         </Grid>
 

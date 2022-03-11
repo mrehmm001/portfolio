@@ -56,7 +56,10 @@ function Contact() {
         //Animation for the heading    
         gsap.fromTo(element.querySelector(".heading-5"),{x:-100},{x:0,
             stagger: animationSpeed,
-            scrollTrigger: element.querySelector(".heading-5")})        
+            scrollTrigger: element.querySelector(".heading-5")})  
+        return () => {
+            gsap.kill()
+            };          
      }, []);
     return ( 
         <Paper className="Contact" style={styles.container} ref={ref}>
@@ -70,7 +73,7 @@ function Contact() {
                                 <Typography className="small-talk" variant="h6" color="textSecondary" style={{textAlign:"center",fontWeight:500}}>Want to get in touch? Whether you have a question or just want to say hi, I’ll try my best to get back to you!</Typography>
                             </Box>
                             <Box className="say-hello" style={{display:"flex",justifyContent:"center"}}>
-                                <Button style={{padding:"1em"}}  variant="outlined">Say Hello</Button>
+                                <Button href="mailto:muneeb73@outlook.com" style={{padding:"1em"}}  variant="outlined">Say Hello</Button>
                             </Box>
                         </Box>
 

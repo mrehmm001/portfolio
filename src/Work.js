@@ -84,6 +84,10 @@ function Work() {
                 stagger: animationSpeed,
                 scrollTrigger: element.querySelector(`.point`)},`-=${animationSpeed}`)
 
+        return () => {
+            gsap.kill()
+            };        
+
      }, []);
     return ( 
         <Paper className="Experience" style={styles.container} ref={ref}>
