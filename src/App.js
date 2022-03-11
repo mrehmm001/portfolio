@@ -37,7 +37,7 @@ function App() {
     const element = ref.current;
     switch(link){
       case "HOME":
-        element.querySelector(".Home").scrollIntoView({ behavior: 'smooth', block: 'start' })
+        window.scrollTo(0, 0)
         break;
       case "ABOUT ME":
         element.querySelector(".About").scrollIntoView({ behavior: 'smooth', block: 'start' })

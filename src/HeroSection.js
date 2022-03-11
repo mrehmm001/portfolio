@@ -72,7 +72,7 @@ const styles ={
 function HeroSection({handleShowProject}) {
 
     return ( 
-        <Paper style={styles.container}>
+        <Paper className="Hello" style={styles.container}>
  
             <Parallax speed={-70} className="background" style={styles.background}></Parallax>
             {/* <div className="background" style={styles.background}></div> */}
