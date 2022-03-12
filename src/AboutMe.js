@@ -17,7 +17,7 @@ const styles = {
     },
 }
 
-const recentTech = ["TypeScript","JavaScript","TensorFlow","Keras","Flask","Node.js","Express"]
+const recentTech = ["TypeScript","JavaScript","TensorFlow","Keras","Flask","Node.js","Scikit-Learn"]
 
 function AboutMe() {
     const fontSize="h6"
