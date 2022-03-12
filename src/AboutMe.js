@@ -17,8 +17,6 @@ const styles = {
     },
 }
 
-const recentTech = ["TypeScript","JavaScript","TensorFlow","Keras","Flask","Node.js","Scikit-Learn"]
-
 function AboutMe() {
     const fontSize="h6"
     gsap.registerPlugin(ScrollTrigger);
@@ -102,7 +100,7 @@ function AboutMe() {
                                             <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Flask</Typography>
                                             <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Python</Typography>
                                             <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>TensorFlow</Typography>
-                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Express</Typography>
+                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Scikit-Learn</Typography>
                                         </Grid>
          
                                     </Grid>
