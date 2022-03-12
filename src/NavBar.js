@@ -28,17 +28,18 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 
 function Navbar({width,handleNavClick}) {
+    const [state,setState] = useState(false)
+    const [navState,setNavState]=useState({background:"transparent",padding:"15px"})
+    const [mobileNavState,setMobileNavState] = useState("")
 
     function NavButton({width,click,linkName}){
         return(
             <Grid item style={{width:width}}>
-                <Button style={{width:width}} onClick={()=>handleNavClick(linkName)} variant={linkName=="CV"?"outlined":"text"}>{linkName}</Button>
+                <Button style={{width:width}} onClick={()=>{setState(false);setMobileNavState(linkName); handleNavClick(linkName)}} variant={linkName=="CV"?"outlined":"text"}>{linkName}</Button>
             </Grid>
         )
     }
 
-    const [state,setState] = useState(false)
-    const [navState,setNavState]=useState({background:"transparent",padding:"15px"})
     const handleScroll = () => {
         const position = window.pageYOffset;
         if(position<10){
@@ -47,6 +48,11 @@ function Navbar({width,handleNavClick}) {
             setNavState({background:"",padding:"8px",top:navState.top})
         }
     };
+
+    useEffect(() => {
+        console.log("test")
+        handleNavClick(mobileNavState)
+    },[state]); 
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -83,7 +89,7 @@ function Navbar({width,handleNavClick}) {
             {/* For Smaller Screens */}
             <Container sx={{ display: { xs: 'block', md: 'none' } }}>
                 <IconButton onClick={()=>toggelDrawer(true)} style={styles.menuIconButton}>
-                    <MenuIcon style={styles.menuIcon}/>                    
+                    <MenuIcon fontSize="medium"/>                    
                 </IconButton>
                 <Drawer 
                       sx={{ display: { xs: 'block', md: "none" } }}
