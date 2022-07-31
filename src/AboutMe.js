@@ -113,7 +113,7 @@ function AboutMe() {
                         <Divider sx={{display:{xs:"none",md:"block"}}} orientation="vertical" flexItem></Divider>
                         <Grid className="picture" flex={1} item>
                             <Paper elevation={3} sx={{overflow:"hidden",position:"relative",marginTop:{xs:"2em",md:"0px"},marginLeft:{xs:"auto"},marginRight:{xs:"auto"},maxWidth:"300px",height:"350px"}}>
-                                <img style={{width:"100%",height:"110%",objectFit:"cover",position:"absolute",bottom:"0.2px"}} src={require("./assets/profile.jfif")} alt="" />
+                                <img style={{width:"100%",height:"110%",objectFit:"cover",position:"absolute",bottom:"0.2px"}} src={require("./assets/profile_picture.jpeg")} alt="" />
                             </Paper>
                         </Grid>
 

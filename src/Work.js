@@ -21,9 +21,19 @@ const styles = {
 
 }
 
-const experience=[{
+const experience=[
+    {
+        role:"Software Engineer",
+        company:"Imagination Technologies",
+        date:"Jul 2022 - present ",
+        description:["After completing my internship I was fortuante enough to be brought back as a full-time Software Engineer",
+    "Developing tools for the Catapult SDK."]
+    },
+    
+    
+    {
     role:"Software Engineer Intern",
-    company:"Imagination Technologies",
+    company:"Imagination Technologies (internship)",
     date:"Jun 2021 - Sep 2021 ",
     description:["I undertook a summer placement as a Software Engineer at Imagination Technologies where I contributed towards the development of an IDE for embedded system developers who wish to develop on the RISC-V architecture.",
     "Researched, designed, developed and maintained GUI extensions written in TypeScript for the IDE.",
@@ -97,26 +107,21 @@ function Work() {
                 <Grid container direction={{xs:"column",md:"row"}}>
                     <Grid className="experience-list" item>
                         <Grid container  direction={{xs:"row",md:"column"}}>
-                            <Grid item>
-                                <Button onClick={()=>showWork("Imagination Technologies")} style={{
-                                    borderRadius:0,
-                                    padding:"1em",
-                                    borderLeft:work=="Imagination Technologies"?"1px solid lightblue":"1px solid gray",
-                                    width:"100%",
-                                    justifyContent:"start"
-                                    
-                                }}>Imagination Technologies</Button>
-                            </Grid>
-                            <Grid item>
-                                <Button onClick={()=>showWork("Code Your Future")} style={{
-                                    borderRadius:0,
-                                    padding:"1em",
-                                    borderLeft:work=="Code Your Future"?"1px solid lightblue":"1px solid gray",
-                                    width:"100%",
-                                    justifyContent:"start"
-                                    
-                                }}>Code Your Future</Button>
-                            </Grid>
+                            {experience.map(x=>{
+                                return(
+                                    <Grid item>
+                                        <Button onClick={()=>showWork(x.company)} style={{
+                                            borderRadius:0,
+                                            padding:"1em",
+                                            borderLeft:work==x.company?"1px solid lightblue":"1px solid gray",
+                                            width:"100%",
+                                            justifyContent:"start"
+                                            
+                                        }}>{x.company}</Button>
+                                    </Grid>
+                                );
+
+                            })}
                         </Grid>    
                      </Grid>
 

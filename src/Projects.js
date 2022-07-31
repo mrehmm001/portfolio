@@ -12,6 +12,17 @@ import FolderIcon from '@mui/icons-material/Folder';
 const { useEffect, useRef, forwardRef } = React;
 const featuredProjects = [
     {
+        name:"Dissertation: Deep Image Colourisation: comparing AutoEncoders and CGans ",
+        date:"2022",
+        description:`For my final year dissertation I worked on a research project. This investigation was aimed at analysing deep learning techniques
+        used for image colourisation, specifically AutoEncoders and Conditional Adversarial networks.`,
+        github:"https://github.com/mrehmm001/Deep-Image-Colourisation-comparing-AutoEncoders-and-Conditional-Adversarial-Networks",
+        liveLink:"",
+        techList:["TensorFlow","Keras","Python","Scikit-image"],
+        imageURL:"assets/dissertation.JPG",
+        id:1
+    },
+    {
         name:"MRI Brain cancer classifier",
         date:"2022",
         description:"Developed a deep learning model capable of identifying brain tumors from MRI images.",
@@ -61,7 +72,11 @@ const featuredProjects = [
         imageURL:"assets/AgileSaver.png",
         id:5
     },
-    {
+    
+]
+
+const otherProjects =
+    [     {
         name:"Game project",
         date:"2019",
         description:"I made a fun 2D game project during my first year of University. I used Javascript with the help of P5JS library to make this. The game has recently been updated to include multiplayer feature, using socket.io!",
@@ -70,12 +85,8 @@ const featuredProjects = [
         techList:["P5.js","JavaScript","Socket.io"],
         imageURL:"assets/gameProject.png",
         id:6
-    },
-    
-]
-
-const otherProjects =
-    [    {
+    }, {
+        
         name:"Todo app (Java app)",
         date:"2021",
         description:"Developed a TODO GUI application using Java Swing library. The application is used for organising tasks, remember deadlines & to keep track of progress.",
@@ -124,16 +135,6 @@ const otherProjects =
         techList:["HTML","CSS","JavaScript"],
         imageURL:"assets/Treeverse.png",
         id:11
-    },
-    {
-        name:"Park Alley (Website)",
-        date:"2019",
-        description:"In a group of 5, we’ve designed and developed a theme park website called Park Ally.",
-        github:"",
-        liveLink:"http://igor.gold.ac.uk/~mrehm001/groupWebsite/index.html",
-        techList:["HTML","CSS"],
-        imageURL:"assets/ParkAlley.png",
-        id:12
     }]
 
 const styles = {
