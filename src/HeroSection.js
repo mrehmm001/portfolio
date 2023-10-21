@@ -9,7 +9,7 @@ import { Parallax } from "react-scroll-parallax";
 
 
 const { useEffect, useRef, forwardRef } = React;
-const backgroundImage = "https://images.unsplash.com/photo-1645193584649-570f8f1eaddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+const backgroundImage = "https://images.unsplash.com/photo-1697450300645-faf3676bb7b5?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 
 const styles ={

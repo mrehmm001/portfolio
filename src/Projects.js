@@ -12,6 +12,22 @@ import FolderIcon from '@mui/icons-material/Folder';
 const { useEffect, useRef, forwardRef } = React;
 const featuredProjects = [
     {
+        name:"Dhania (ongoing)",
+        date:"2023",
+        description:`Dhania is my ongoing project, which I started in 2023. It is a
+        RAG (Retrieval Augmented Generation) AI model, designed to
+        enhance conversational interactions by providing contextually
+        relevant responses based on the input data. Dhania leverages
+        a robust stack of cutting-edge technologies, including Next.js,
+        Prisma, Langchain, AWS serverless infrastructure, and prompt
+        engineering.`,
+        github:"",
+        liveLink:"",
+        techList:["NextJs","Prisma","Clerk","Langchain", "Socketio"],
+        imageURL:"assets/dhania.png",
+        id:1
+    },
+    {
         name:"Dissertation: Deep Image Colourisation: comparing AutoEncoders and CGans ",
         date:"2022",
         description:`For my final year dissertation I worked on a research project. This investigation was aimed at analysing deep learning techniques
@@ -20,7 +36,7 @@ const featuredProjects = [
         liveLink:"",
         techList:["TensorFlow","Keras","Python","Scikit-image"],
         imageURL:"assets/dissertation.JPG",
-        id:1
+        id:2
     },
     {
         name:"MRI Brain cancer classifier",
@@ -30,17 +46,17 @@ const featuredProjects = [
         liveLink:"",
         techList:["TensorFlow","Keras","Python","OpenCV"],
         imageURL:"assets/MRI.jpg",
-        id:1
+        id:3
     },
     {
         name:"Portfolio website",
         date:"2022",
         description:"The page you are currently on is used to show my projects, github repository and CV. ",
         github:"https://github.com/mrehmm001/portfolio",
-        liveLink:"https://muneeb-rehman.herokuapp.com/",
+        liveLink:"https://mrehmm001.github.io/portfolio/",
         techList:["React.js","JavaScript","Material-UI"],
         imageURL:"assets/portfolio.JPG",
-        id:2
+        id:4
     },
     {
         name:"Handwriting digit and letter classifier",
@@ -50,7 +66,7 @@ const featuredProjects = [
         liveLink:"",
         techList:["TensorFlow","Keras","Python","OpenCV"],
         imageURL:"assets/EMNIST.png",
-        id:3
+        id:5
     },
     {
         name:"2 layer neural network",
@@ -60,31 +76,32 @@ const featuredProjects = [
         liveLink:"",
         techList:["MatLab"],
         imageURL:"assets/matlab.JPG",
-        id:4
-    },
-    {
-        name:"Agile Saver",
-        date:"2021",
-        description:"AgileSaver is my 2nd year project wherein a group of 7, designed, prototyped and implemented a personal budgeting android application that uses machine learning/AI to keep track of expenses learns spending patterns and recommends deviations to the user’s day or routine in order to save them money.",
-        github:"https://github.com/mrehmm001/AgileSaver/tree/main",
-        liveLink:"",
-        techList:["Android Studio","Java","XML","Node.js","Express.js","PostgreSQL"],
-        imageURL:"assets/AgileSaver.png",
-        id:5
+        id:6
     },
     
 ]
 
 const otherProjects =
-    [     {
+    [  
+        {
+            name:"Agile Saver",
+            date:"2021",
+            description:"AgileSaver is my 2nd year project wherein a group of 7, designed, prototyped and implemented a personal budgeting android application that uses machine learning/AI to keep track of expenses learns spending patterns and recommends deviations to the user’s day or routine in order to save them money.",
+            github:"https://github.com/mrehmm001/AgileSaver/tree/main",
+            liveLink:"",
+            techList:["Android Studio","Java","XML","Node.js","Express.js","PostgreSQL"],
+            imageURL:"assets/AgileSaver.png",
+            id:7
+        },
+        {
         name:"Game project",
         date:"2019",
         description:"I made a fun 2D game project during my first year of University. I used Javascript with the help of P5JS library to make this. The game has recently been updated to include multiplayer feature, using socket.io!",
         github:"https://github.com/mrehmm001/Game-Project",
-        liveLink:"https://game-project3454.herokuapp.com/",
+        liveLink:"https://game-project.onrender.com/",
         techList:["P5.js","JavaScript","Socket.io"],
         imageURL:"assets/gameProject.png",
-        id:6
+        id:8
     }, {
         
         name:"Todo app (Java app)",
@@ -94,7 +111,7 @@ const otherProjects =
         liveLink:"",
         techList:["Java","Swing"],
         imageURL:"assets/Todo.png",
-        id:7
+        id:9
     },
     {
         name:"Goldories (Web app)",
@@ -104,7 +121,7 @@ const otherProjects =
         liveLink:"https://www.doc.gold.ac.uk/usr/422/",
         techList:["HTML","CSS","Node.js","Express.js","MongoDB","Bcrypt"],
         imageURL:"assets/Goldories.png",
-        id:8
+        id:10
     },
     {
         name:"Data visualisation project",
@@ -114,7 +131,7 @@ const otherProjects =
         liveLink:"",
         techList:["P5.js","JavaScript","HTML","CSS"],
         imageURL:"assets/DataVis.png",
-        id:9
+        id:11
     },
     {
         name:"Connect three app",
@@ -124,18 +141,9 @@ const otherProjects =
         liveLink:"",
         techList:["Android Studio","Java","XML"],
         imageURL:"assets/connect3.png",
-        id:10
+        id:12
     },
-    {
-        name:"Treeverse (Website)",
-        date:"2019",
-        description:"Developed a website called Treeverse, a website for raising awareness on deforestation and encourage people to plant trees.",
-        github:"",
-        liveLink:"http://igor.gold.ac.uk/~mrehm001/Treeverse/index.html",
-        techList:["HTML","CSS","JavaScript"],
-        imageURL:"assets/Treeverse.png",
-        id:11
-    }]
+]
 
 const styles = {
     container:{

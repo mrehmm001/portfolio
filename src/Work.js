@@ -25,9 +25,16 @@ const experience=[
     {
         role:"Software Engineer",
         company:"Imagination Technologies",
-        date:"Jul 2022 - present ",
-        description:["After completing my internship I was fortuante enough to be brought back as a full-time Software Engineer",
-    "Developing tools for the Catapult SDK."]
+        date:"Jul 2022 - Oct 2023",
+        description:[
+        "Researched, designed, developed and maintained tools for the IDE using TypeScript.",
+        "worked in an agile methodology workflow",
+        "Understood and found my way around the codebase",
+        "Detected problems and provided a solution to them",
+        "Learnt new technologies on the go",
+        "Addressed review feedback and took careful consideration of design & implementation, ensuring the project meets quality standards.",
+        "Worked closely with colleagues such as project managers and Engineers, ensuring effective communication and teamwork"
+    ]
     },
     
     

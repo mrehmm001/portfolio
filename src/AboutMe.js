@@ -75,12 +75,12 @@ function AboutMe() {
  
                                 <Grid item>
                                     <Typography color="textSecondary" variant={fontSize}>
-                                        Imaginative programmer and problem solver with software development, user interface design and graphic design experience. I am currently a final year student studying BSc Computer Science from Goldsmiths, University of London.
+                                        My name is Muneeb Rehman, a software engineer driven by an enduring fascination with computers and coding. My journey in software development began at a young age, and I've since cultivated a comprehensive skill set. With proficiency in various programming languages and a flair for problem-solving, I have consistently contributed to the successful delivery of software projects.
                                     </Typography> 
                                 </Grid>
                                 <Grid item>
                                     <Typography color="textSecondary" variant={fontSize}>
-                                         I am adaptive and self-motivated, I enjoy taking on new challenges and using my knowledge skills, great attention to detail to ensure that work is complete on time and with great quality.
+                                    I am an adaptable team player who excels in collaborative environments and is well-versed in the latest development methodologies and tools. My commitment to crafting efficient and innovative software solutions remains unwavering, making me a valuable asset to any software development team.
                                     </Typography> 
                                 </Grid>
                                 <Grid item>
@@ -92,13 +92,13 @@ function AboutMe() {
                                     <Grid container>
                                         <Grid item flex={1}>
                                             <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>TypeScript</Typography>
-                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>JavaScript</Typography>
-                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Node.js</Typography>
-                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Express.js</Typography>
+                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>React</Typography>
+                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Nodejs</Typography>
+                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Nextjs</Typography>
                                         </Grid>
                                         <Grid item flex={1}>
-                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Flask</Typography>
-                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Python</Typography>
+                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Langchain</Typography>
+                                            <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>OpenAI</Typography>
                                             <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>TensorFlow</Typography>
                                             <Typography className={"skill"} style={{marginBottom:"1em",display:"flex"}}><ArrowRightIcon color="primary"/>Scikit-Learn</Typography>
                                         </Grid>
