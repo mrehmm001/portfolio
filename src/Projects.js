@@ -1,15 +1,14 @@
-import { ButtonGroup, Chip, Container, Divider, Grid, IconButton, Paper, Typography } from "@mui/material";
+import {Chip, Container, Divider, Grid, IconButton, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Heading from "./Heading";
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import Zoom from '@mui/material/Zoom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import FolderIcon from '@mui/icons-material/Folder';
-const { useEffect, useRef, forwardRef } = React;
+const { useEffect, useRef } = React;
 const featuredProjects = [
     {
         name:"Dhania (ongoing)",
@@ -25,7 +24,6 @@ const featuredProjects = [
         liveLink:"",
         techList:["NextJs","Prisma","Clerk","Langchain", "Socketio"],
         imageURL:"assets/dhania.png",
-        id:1
     },
     {
         name:"Dissertation: Deep Image Colourisation: comparing AutoEncoders and CGans ",
@@ -36,7 +34,15 @@ const featuredProjects = [
         liveLink:"",
         techList:["TensorFlow","Keras","Python","Scikit-image"],
         imageURL:"assets/dissertation.JPG",
-        id:2
+    },
+    {
+        name:"Agile Saver",
+        date:"2021",
+        description:"AgileSaver is my 2nd year project wherein a group of 7, designed, prototyped and implemented a personal budgeting android application that uses machine learning/AI to keep track of expenses learns spending patterns and recommends deviations to the user’s day or routine in order to save them money.",
+        github:"https://github.com/mrehmm001/AgileSaver/tree/main",
+        liveLink:"",
+        techList:["Android Studio","Java","XML","Node.js","Express.js","PostgreSQL"],
+        imageURL:"assets/AgileSaver.png",
     },
     {
         name:"MRI Brain cancer classifier",
@@ -46,7 +52,6 @@ const featuredProjects = [
         liveLink:"",
         techList:["TensorFlow","Keras","Python","OpenCV"],
         imageURL:"assets/MRI.jpg",
-        id:3
     },
     {
         name:"Portfolio website",
@@ -56,7 +61,6 @@ const featuredProjects = [
         liveLink:"https://mrehmm001.github.io/portfolio/",
         techList:["React.js","JavaScript","Material-UI"],
         imageURL:"assets/portfolio.JPG",
-        id:4
     },
     {
         name:"Handwriting digit and letter classifier",
@@ -66,7 +70,6 @@ const featuredProjects = [
         liveLink:"",
         techList:["TensorFlow","Keras","Python","OpenCV"],
         imageURL:"assets/EMNIST.png",
-        id:5
     },
     {
         name:"2 layer neural network",
@@ -76,23 +79,12 @@ const featuredProjects = [
         liveLink:"",
         techList:["MatLab"],
         imageURL:"assets/matlab.JPG",
-        id:6
     },
     
 ]
 
 const otherProjects =
     [  
-        {
-            name:"Agile Saver",
-            date:"2021",
-            description:"AgileSaver is my 2nd year project wherein a group of 7, designed, prototyped and implemented a personal budgeting android application that uses machine learning/AI to keep track of expenses learns spending patterns and recommends deviations to the user’s day or routine in order to save them money.",
-            github:"https://github.com/mrehmm001/AgileSaver/tree/main",
-            liveLink:"",
-            techList:["Android Studio","Java","XML","Node.js","Express.js","PostgreSQL"],
-            imageURL:"assets/AgileSaver.png",
-            id:7
-        },
         {
         name:"Game project",
         date:"2019",
@@ -101,7 +93,6 @@ const otherProjects =
         liveLink:"https://game-project.onrender.com/",
         techList:["P5.js","JavaScript","Socket.io"],
         imageURL:"assets/gameProject.png",
-        id:8
     }, {
         
         name:"Todo app (Java app)",
@@ -111,7 +102,6 @@ const otherProjects =
         liveLink:"",
         techList:["Java","Swing"],
         imageURL:"assets/Todo.png",
-        id:9
     },
     {
         name:"Goldories (Web app)",
@@ -121,7 +111,6 @@ const otherProjects =
         liveLink:"https://www.doc.gold.ac.uk/usr/422/",
         techList:["HTML","CSS","Node.js","Express.js","MongoDB","Bcrypt"],
         imageURL:"assets/Goldories.png",
-        id:10
     },
     {
         name:"Data visualisation project",
@@ -131,7 +120,6 @@ const otherProjects =
         liveLink:"",
         techList:["P5.js","JavaScript","HTML","CSS"],
         imageURL:"assets/DataVis.png",
-        id:11
     },
     {
         name:"Connect three app",
@@ -141,7 +129,6 @@ const otherProjects =
         liveLink:"",
         techList:["Android Studio","Java","XML"],
         imageURL:"assets/connect3.png",
-        id:12
     },
 ]
 
@@ -175,7 +162,7 @@ const styles = {
 
 }
 
-function projectCard({name,date,description,github,liveLink,techList,imageURL,id}){
+function projectCard({name,date,description,github,liveLink,techList,imageURL},id){
     return (
         <Box className={`project-${id}`} my={3}>
             <Card sx={{height:{xs:"100%",md:"420px",xl:"340px"},flexDirection:{xs:"column",md:"row-reverse"}}} elevation={3} style={styles.cardStyle}>
@@ -204,14 +191,11 @@ function projectCard({name,date,description,github,liveLink,techList,imageURL,id
       );
 }
 
-function secondaryProjectCard({name,date,description,github,liveLink,techList,imageURL,id}){
+function secondaryProjectCard({name,date,description,github,liveLink,techList,imageURL},id){
 
     return (
         <Grid className={`secondary-project`} item xs={1}>
                 <Card style={{position:"relative", height:"100%"}} elevation={3}>
-                    {/* <Box style={{height:"20em",overflow:"hidden"}}>   
-                        <img style={{objectFit:"cover",width:"100%",height:"100%"}}src={require("./"+imageURL)} alt="" />
-                    </Box> */}
                     <Box style={{height:"100%", display:"flex",flexDirection:"column"}} p={3}>   
 
                         <Typography style={{display:"flex",alignItems: 'center',flexWrap: 'wrap',}} variant="h5"><FolderIcon sx={{marginRight:"0.2em"}} fontSize="large" style={{marginBottm:"0px"}}/>{name}</Typography>
@@ -234,15 +218,15 @@ function secondaryProjectCard({name,date,description,github,liveLink,techList,im
 }
 
 function listProjects(){
-    return featuredProjects.map((project)=>{
-        return (projectCard(project))
+    return featuredProjects.map((project,i)=>{
+        return projectCard(project,i);
     })
 }
 
 function listSecondaryProjects(){
-    return otherProjects.map((project)=>{
+    return otherProjects.map((project,i)=>{
         return (
-            secondaryProjectCard(project)
+            secondaryProjectCard(project,i)
         )
     })
 
