@@ -73,17 +73,9 @@ function App() {
       gsap.fromTo(element.querySelectorAll(".heading"),{x:-100},{x:0,
           stagger: animationSpeed,
           scrollTrigger: element.querySelectorAll(".heading")})   
-          
-      gsap.fromTo(element.querySelector(".hello"),1,{opacity:0,filter: "blur(8px)"},{opacity:1,filter: "blur(0px)"})
-      gsap.fromTo(element.querySelector(".im"),1,{opacity:0,filter: "blur(8px)"},{opacity:1,filter: "blur(0px)"},"-="+animationSpeed)
-      gsap.fromTo(element.querySelector(".fullname"),1,{opacity:0,filter: "blur(8px)"},{opacity:1,filter: "blur(0px)"},"-="+animationSpeed)
-      gsap.fromTo(element.querySelector(".firstname"),1,{y:-50,opacity:0,filter: "blur(8px)"},{y:0,opacity:1,filter: "blur(0px)"},"-="+animationSpeed)
-      gsap.fromTo(element.querySelector(".resume"),1,{opacity:0,filter: "blur(8px)"},{opacity:1,filter: "blur(0px)"},"-="+animationSpeed)
-      gsap.fromTo(element.querySelector(".links"),1,{opacity:0,filter: "blur(8px)"},{opacity:1,filter: "blur(0px)"},"-="+animationSpeed)
-      gsap.fromTo(element.querySelector(".button"),1,{opacity:0,filter: "blur(8px)"},{opacity:1,filter: "blur(0px)"},"-="+animationSpeed)
-      gsap.fromTo(element.querySelector(".overlay"),1,{filter: "opacity(100%)",zoom:"1.5"},{filter: "opacity(60%)",zoom:"1",ease:Power2.easeInOut},"-="+animationSpeed)
-      gsap.fromTo(element.querySelector(".background"),1,{width:"150%"},{width:"100%",ease:Power2.easeInOut},"-=1")
-      // gsap.fromTo(element.querySelector(".nav"),1,{opacity:0,y: -100},{opacity:1,y: 0, onComplete: animationFinished },"-=1");
+      gsap.fromTo(element.querySelector(".overlay"),1,{filter: "opacity(100%)",zoom:"1.5"},{filter: "opacity(60%)",zoom:"1",ease:Power2.easeInOut})
+      gsap.fromTo(element.querySelector(".background"),1,{width:"150%"},{width:"100%",ease:Power2.easeInOut})
+      gsap.fromTo(element.querySelector(".nav"),1,{opacity:0,y: -100},{opacity:1,y: 0, onComplete: animationFinished });
       
       return () => {
         gsap.kill()

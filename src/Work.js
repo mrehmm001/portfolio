@@ -25,7 +25,7 @@ const experience=[
     {
         role:"Software Engineer",
         company:"Imagination Technologies",
-        date:"Jul 2022 - Oct 2023",
+        date:"Jul 2022 - Dec 2023",
         description:[
         "Researched, designed, developed and maintained tools for the IDE using TypeScript.",
         "worked in an agile methodology workflow",
