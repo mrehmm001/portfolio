@@ -20,7 +20,7 @@ const featuredProjects = [
         a robust stack of cutting-edge technologies, including Next.js,
         Prisma, Langchain, AWS serverless infrastructure, and prompt
         engineering.`,
-        github:"",
+        github:"https://github.com/mrehmm001/Dhania-ai-nextjs",
         liveLink:"",
         techList:["NextJs","Prisma","Clerk","Langchain", "Socketio"],
         imageURL:"assets/dhania.png",
