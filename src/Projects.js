@@ -180,7 +180,7 @@ function projectCard({name,date,description,github,liveLink,techList,imageURL},i
                             {techList.map(tech=><Chip sx={{marginRight:"1em",marginBottom:"1em"}} variant="outlined" label={tech}/>)}
                         </Box>
                         <Box sx={{position:{md:"absolute",xs:"relative"},
-                                 bottom:{md:"30px"}}}>
+                                 bottom:{md:"15px"}}}>
                             {github && <IconButton href={github} style={{marginRight:"0.5em"}} ><GitHubIcon fontSize="large"/></IconButton>}
                             {liveLink && <IconButton href={liveLink}><LaunchIcon fontSize="large"/></IconButton>}
                         </Box>
