@@ -115,7 +115,7 @@ const otherProjects =
     {
         name:"Data visualisation project",
         date:"2020",
-        description:"Developed a Data visualization app which you can visualize several data, such as population map, Solar System, GDP data etc.",
+        description:"Developed a Data visualisation app which you can visualise several data, such as population map, Solar System, GDP data etc.",
         github:"https://github.com/mrehmm001/Data-visualisation-project",
         liveLink:"",
         techList:["P5.js","JavaScript","HTML","CSS"],

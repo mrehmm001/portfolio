@@ -23,6 +23,15 @@ const styles = {
 
 const experience=[
     {
+        role:"Front-End Software Engineer",
+        company:"Alma Economics",
+        date:"Mar 2024 - Present",
+        description:[
+        "Recently accepted this role as a front-end software engineer :)",
+        "Will be involved in tackling difficult important problems using technology"
+    ]
+    },
+    {
         role:"Software Engineer",
         company:"Imagination Technologies",
         date:"Jul 2022 - Dec 2023",
@@ -61,7 +70,7 @@ const experience=[
 
 
 function Work() {
-    const [work,showWork] = React.useState("Imagination Technologies")
+    const [work,showWork] = React.useState("Alma Economics")
     gsap.registerPlugin(ScrollTrigger);
     const ref = useRef();
     const animationSpeed = 0.33;
