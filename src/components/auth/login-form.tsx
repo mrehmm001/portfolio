@@ -16,13 +16,12 @@ import {
 import { Button } from "../ui/button";
 import CardWrapper from "./card-wrapper";
 import login from "actions/login";
-import { useEffect, useState } from "react";
 
 const LoginForm = () => {
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      name: "",
+      email: "",
       password: "",
     },
   });
@@ -43,7 +42,7 @@ const LoginForm = () => {
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
             control={form.control}
-            name="name"
+            name="email"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>

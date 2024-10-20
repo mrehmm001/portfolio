@@ -15,6 +15,7 @@ import {
 } from "../ui/form";
 import { Button } from "../ui/button";
 import CardWrapper from "./card-wrapper";
+import register from "actions/register";
 
 const RegisterForm = () => {
   const form = useForm<z.infer<typeof registerSchema>>({
@@ -25,10 +26,11 @@ const RegisterForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof registerSchema>) {
+  async function onSubmit(values: z.infer<typeof registerSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    const res = await register(values);
+    console.log(res);
   }
 
   return (
