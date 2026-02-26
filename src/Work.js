@@ -23,12 +23,23 @@ const styles = {
 
 const experience=[
     {
+        role:"Software Engineer",
+        company:"Visa / Pismo",
+        date:"Feb 2026 - present",
+        description:[
+            "Recently accepted a fullstack software engineer role",
+            "Contributing to backend development using Golang and GraphQL",
+        ]
+    },
+    {
         role:"Front-End Software Engineer",
         company:"Alma Economics",
-        date:"Mar 2024 - Present",
+        date:"Mar 2024 - Feb 2026",
         description:[
-        "Recently accepted this role as a front-end software engineer :)",
-        "Will be involved in tackling difficult important problems using technology"
+            "Developed and maintained front-end using React and TypeScript",
+            "Transitioned to full-stack role, contributing to Django backend development",
+            "Led development on several high-impact projects: Cobflow, Evidence Map, and Theory of Change",
+            "Revamped company website using WordPress, Elementor, and implemented careers page backend"
     ]
     },
     {
