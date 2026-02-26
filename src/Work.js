@@ -27,7 +27,7 @@ const experience=[
         company:"Visa / Pismo",
         date:"Feb 2026 - present",
         description:[
-            "Recently accepted a fullstack software engineer role",
+            "Recently accepted a fullstack software engineer role at Pismo (a Visa company).",
             "Contributing to backend development using Golang and GraphQL",
         ]
     },
