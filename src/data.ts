@@ -193,7 +193,7 @@ export const featuredProjects: Project[] = [
       'The site you are on: my experience, projects and CV. Rebuilt with React, Vite and TypeScript.',
     stack: ['React', 'TypeScript', 'Vite'],
     github: 'https://github.com/mrehmm001/portfolio',
-    live: 'https://mrehmm001.github.io/portfolio/',
+    live: 'https://muneebrehman.co.uk/',
     image: portfolio,
   },
   {
