@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Muneeb Rehman – CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    />
+    <style>
+      /* Source for public/CV.pdf. Rebuild with: npm run cv */
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        --ink: #121826;
+        --slate: #555e70;
+        --rule: #d9dde5;
+        --blue: #2536d9;
+        --night: #0a0e17;
+        --font-display: 'Bricolage Grotesque', 'Arial Narrow', sans-serif;
+        --font-body: 'IBM Plex Sans', Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 8.6pt;
+        line-height: 1.38;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      ul {
+        margin: 0;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+      }
+
+      /* ---------- Header ---------- */
+      .head {
+        position: relative;
+        padding: 9mm 14mm 6mm;
+        background:
+          radial-gradient(60% 120% at 12% 100%, rgba(51, 71, 240, 0.45), transparent 70%),
+          var(--night);
+        color: #f4f6fb;
+      }
+
+      .head h1 {
+        font-family: var(--font-display);
+        font-size: 32pt;
+        font-weight: 800;
+        font-stretch: 75%;
+        font-variation-settings: 'opsz' 96;
+        line-height: 0.95;
+        letter-spacing: -0.01em;
+      }
+
+      .head .role {
+        margin-top: 2mm;
+        font-size: 11pt;
+        font-weight: 500;
+      }
+
+      .head .summary {
+        max-width: 150mm;
+        margin-top: 3mm;
+        color: rgba(244, 246, 251, 0.82);
+        font-size: 9.2pt;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2mm 6mm;
+        margin-top: 3.5mm;
+        padding-top: 3mm;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+        font-size: 8.4pt;
+        color: rgba(244, 246, 251, 0.9);
+      }
+
+      /* ---------- Body ---------- */
+      .body {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 58mm;
+        gap: 8mm;
+        padding: 6mm 14mm 8mm;
+      }
+
+      h2 {
+        margin-bottom: 3mm;
+        padding-bottom: 1.2mm;
+        border-bottom: 1.5px solid var(--ink);
+        font-family: var(--font-display);
+        font-size: 13pt;
+        font-weight: 800;
+        font-stretch: 80%;
+        letter-spacing: 0.01em;
+      }
+
+      section + section {
+        margin-top: 4.5mm;
+      }
+
+      .job + .job {
+        margin-top: 3.2mm;
+      }
+
+      .job-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 4mm;
+      }
+
+      h3 {
+        font-family: var(--font-display);
+        font-size: 10.6pt;
+        font-weight: 700;
+        font-stretch: 88%;
+      }
+
+      .dates {
+        flex: none;
+        color: var(--slate);
+        font-size: 8.2pt;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .company {
+        margin-bottom: 1.2mm;
+        color: var(--blue);
+        font-weight: 500;
+      }
+
+      .company .where {
+        color: var(--slate);
+        font-weight: 400;
+      }
+
+      .points li {
+        position: relative;
+        padding-left: 3.2mm;
+      }
+
+      .points li + li {
+        margin-top: 0.7mm;
+      }
+
+      .points li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.68em;
+        width: 1.6mm;
+        height: 1px;
+        background: var(--slate);
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      /* ---------- Sidebar ---------- */
+      .skill-group + .skill-group {
+        margin-top: 2.6mm;
+      }
+
+      .skill-group h3,
+      .project h3,
+      .edu h3 {
+        font-size: 9.6pt;
+      }
+
+      .skill-group p {
+        color: var(--slate);
+      }
+
+      .project + .project {
+        margin-top: 2.4mm;
+      }
+
+      .project .dates {
+        display: block;
+        margin-bottom: 0.8mm;
+      }
+
+      .project p,
+      .edu p {
+        color: var(--ink);
+      }
+
+      .muted {
+        color: var(--slate);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="head">
+        <h1>Muneeb Rehman</h1>
+        <p class="role">Full-Stack Software Engineer</p>
+        <p class="summary">
+          Full-stack engineer at Pismo, a Visa company, building micro-frontends in React and
+          TypeScript and backend-for-frontend services in Go for Control Center, the operations
+          interface of a cloud-native banking platform. Four years of professional experience across
+          product front ends, developer tooling and full-stack web applications.
+        </p>
+        <p class="contact">
+          <a href="mailto:muneeb73@outlook.com">muneeb73@outlook.com</a>
+          <span>London, UK</span>
+          <a href="https://mrehmm001.github.io/portfolio/">mrehmm001.github.io/portfolio</a>
+          <a href="https://www.linkedin.com/in/muneeb-rehman-5257101b7/">linkedin.com/in/muneeb-rehman-5257101b7</a>
+          <a href="https://github.com/mrehmm001">github.com/mrehmm001</a>
+        </p>
+      </header>
+
+      <div class="body">
+        <main>
+          <section>
+            <h2>Experience</h2>
+
+            <article class="job">
+              <div class="job-top">
+                <h3>Software Engineer</h3>
+                <span class="dates">02/2026 – Present</span>
+              </div>
+              <p class="company">Pismo, a Visa company <span class="where">· London</span></p>
+              <ul class="points">
+                <li>
+                  Full-stack engineer in <strong>Operations UI</strong>, an eight-person squad building
+                  <strong>Control Center</strong>: the web interface business operations teams use to
+                  build, manage and configure financial programs on Pismo's cloud-native banking
+                  platform.
+                </li>
+                <li>
+                  Working on <strong>account management</strong> across
+                  <strong>micro-frontends</strong> in React and TypeScript and
+                  <strong>backend-for-frontend (BFF)</strong> services in Go.
+                </li>
+                <li>
+                  Testing with Jest and React Testing Library and documenting in Storybook; services
+                  run on Kubernetes and AWS with Grafana, on a real-time, event-driven banking API.
+                </li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-top">
+                <h3>Front-End Software Engineer</h3>
+                <span class="dates">03/2024 – 02/2026</span>
+              </div>
+              <p class="company">Alma Economics <span class="where">· London</span></p>
+              <ul class="points">
+                <li>
+                  <strong>Led the initial front-end development</strong> of two greenfield,
+                  high-impact projects, <strong>Cobflow</strong> and <strong>Evidence Maps</strong>,
+                  in React and TypeScript, within a small, highly skilled team of seven.
+                </li>
+                <li>
+                  Maintained and developed several ad-hoc dashboards and visualisation tools,
+                  including <strong>Theory of Change</strong>.
+                </li>
+                <li>
+                  Moved into a <strong>full-stack</strong> role, contributing to the
+                  <strong>Django</strong> backend.
+                </li>
+                <li>
+                  Revamped the company's website in WordPress and Elementor, and built the backend
+                  for careers page submissions.
+                </li>
+                <li>Worked in a waterfall–agile hybrid using GitHub and ClickUp.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-top">
+                <h3>Software Engineer</h3>
+                <span class="dates">07/2022 – 12/2023</span>
+              </div>
+              <p class="company">Imagination Technologies <span class="where">· Kings Langley</span></p>
+              <ul class="points">
+                <li>
+                  Designed, developed and maintained IDE tools with <strong>TypeScript</strong> and the
+                  <strong>VS Code extension API</strong>, improving the experience for embedded
+                  developers.
+                </li>
+                <li>
+                  Built a <strong>WebdriverIO</strong> automated testing framework,
+                  <strong>reducing manual testing by 50%</strong> and speeding up delivery.
+                </li>
+                <li>
+                  Resolved technical issues that led to a <strong>40% performance increase</strong> in
+                  key modules.
+                </li>
+                <li>
+                  Practised code review, documentation and <strong>TDD</strong> in an agile team.
+                </li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-top">
+                <h3>Software Engineer Intern</h3>
+                <span class="dates">07/2021 – 09/2021</span>
+              </div>
+              <p class="company">Imagination Technologies <span class="where">· Kings Langley</span></p>
+              <ul class="points">
+                <li>
+                  Built TypeScript tools for an IDE for embedded developers on the
+                  <strong>RISC-V</strong> architecture.
+                </li>
+                <li>
+                  Developed a <strong>Signal Visualiser</strong> with Chart.js for visualising signal
+                  data, such as data transmitted from DSP processors.
+                </li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-top">
+                <h3>Teaching Assistant</h3>
+                <span class="dates">02/2021 – 06/2021</span>
+              </div>
+              <p class="company">CodeYourFuture <span class="where">· London</span></p>
+              <ul class="points">
+                <li>
+                  Taught HTML, CSS and JavaScript to refugees and low-income learners, supporting the
+                  lead teacher in workshops.
+                </li>
+                <li>Marked coursework and gave students feedback.</li>
+              </ul>
+            </article>
+          </section>
+        </main>
+
+        <aside>
+          <section>
+            <h2>Skills</h2>
+            <div class="skill-group">
+              <h3>Languages</h3>
+              <p>TypeScript, JavaScript, Go, Python, Java, SQL</p>
+            </div>
+            <div class="skill-group">
+              <h3>Front end</h3>
+              <p>React, Next.js, Micro-frontends, Storybook, Jest, React Testing Library, HTML/CSS</p>
+            </div>
+            <div class="skill-group">
+              <h3>Back end and cloud</h3>
+              <p>
+                Go, Node.js, Express, Django, GraphQL, BFFs, PostgreSQL, MySQL, MongoDB, Kubernetes,
+                AWS, Grafana
+              </p>
+            </div>
+            <div class="skill-group">
+              <h3>AI and ML</h3>
+              <p>LangChain, OpenAI, TensorFlow, Keras, scikit-learn</p>
+            </div>
+            <div class="skill-group">
+              <h3>Tools and practice</h3>
+              <p>
+                Git, GitHub, Jira, Confluence, ClickUp, WebdriverIO, Jenkins, Linux, Agile, TDD, code
+                review
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Projects</h2>
+            <article class="project">
+              <h3>Dhania</h3>
+              <span class="dates">05/2023 – 2025</span>
+              <p>RAG assistant giving answers grounded in the user's own data.</p>
+              <p class="muted">Next.js, Prisma, LangChain, Clerk, Socket.IO, Tailwind CSS</p>
+            </article>
+            <article class="project">
+              <h3>AgileSaver</h3>
+              <span class="dates">09/2021 – 05/2022</span>
+              <p>Android budgeting app with ML spending analysis, built in a team of seven.</p>
+              <p class="muted">Java, Node.js, PostgreSQL</p>
+            </article>
+          </section>
+
+          <section class="edu">
+            <h2>Education</h2>
+            <h3>BSc Computer Science</h3>
+            <p>Goldsmiths, University of London</p>
+            <span class="dates">09/2019 – 07/2022</span>
+            <p class="muted" style="margin-top: 1mm">
+              Algorithms, software engineering, AI, neural networks, data mining
+            </p>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
