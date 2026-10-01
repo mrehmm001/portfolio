@@ -4,6 +4,7 @@ import dissertation from './assets/dissertation.webp'
 import emnist from './assets/emnist.webp'
 import matlab from './assets/matlab.webp'
 import mri from './assets/mri.webp'
+import pagecast from './assets/pagecast.webp'
 import portfolio from './assets/portfolio.webp'
 import almaLogo from './assets/logos/alma.svg'
 import cyfLogo from './assets/logos/codeyourfuture.png'
@@ -143,6 +144,16 @@ export const experience: Role[] = [
 ]
 
 export const featuredProjects: Project[] = [
+  {
+    name: 'PageCast',
+    categories: ['ai', 'web'],
+    year: '2026',
+    description:
+      "A Chrome extension that turns the page you're reading, even one behind a login, into a narrated slideshow video. An LLM cuts the clutter and drafts an editable storyboard, then a neural voice narrates every slide in parallel on AWS Lambda, so it starts playing in about ten seconds, with word-by-word subtitles.",
+    stack: ['TypeScript', 'Chrome extension', 'AWS Lambda', 'Terraform', 'LLMs', 'Kokoro TTS', 'ffmpeg'],
+    live: 'https://pagecast.muneebrehman.co.uk/',
+    image: pagecast,
+  },
   {
     name: 'Dhania',
     categories: ['ai', 'web'],
